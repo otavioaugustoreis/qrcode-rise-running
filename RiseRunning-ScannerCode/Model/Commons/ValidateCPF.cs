@@ -1,11 +1,11 @@
-﻿namespace RiseRunning_ScannerCode.Commons
+﻿namespace RiseRunning_ScannerCode.Model.Commons
 {
-    public static  class ValidateCPF
+    public static class ValidateCPF
     {
         public static bool IsCpf(string cpf)
         {
-            int[] multiplicador1 =  { 10, 9, 8, 7, 6, 5, 4, 3, 2 };
-            int[] multiplicador2 =  { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
+            int[] multiplicador1 = { 10, 9, 8, 7, 6, 5, 4, 3, 2 };
+            int[] multiplicador2 = { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
             string tempCpf;
             string digito;
             int soma;
@@ -38,11 +38,11 @@
             return cpf.EndsWith(digito);
         }
 
-        public static long cpfToLong (string cpf)
+        public static long cpfToLong(string cpf)
         {
             cpf = cpf.Trim();
             cpf = cpf.Replace(".", "").Replace("-", "");
-            
+
             return long.Parse(cpf);
         }
     }

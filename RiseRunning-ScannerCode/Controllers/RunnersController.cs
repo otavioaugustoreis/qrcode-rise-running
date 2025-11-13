@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
-using RiseRunning_ScannerCode.Commons;
-using RiseRunning_ScannerCode.Entity;
+using RiseRunning_ScannerCode.Model.Commons;
+using RiseRunning_ScannerCode.Model.Entity;
 using System.Collections.Concurrent;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -31,6 +31,7 @@ namespace RiseRunning_ScannerCode.Controllers
                 var existente = runners.First(r => r.Cpf == ValidateCPF.cpfToLong(cpf));
                 return Ok(MessageCommons.RunnerJaRegistrado(existente.Nome));
             }
+
             var runner = new RunnerEntity
             {
                 Nome = nome,
@@ -43,7 +44,6 @@ namespace RiseRunning_ScannerCode.Controllers
 
             return Ok(MessageCommons.RunnerRegistrado(runner.Nome));
         }
-
 
         [HttpGet]
         public ActionResult<List<RunnerEntity>> GetAllRunner() 

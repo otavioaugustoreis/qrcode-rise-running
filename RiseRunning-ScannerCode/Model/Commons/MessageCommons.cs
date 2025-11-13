@@ -1,4 +1,4 @@
-﻿namespace RiseRunning_ScannerCode.Commons
+﻿namespace RiseRunning_ScannerCode.Model.Commons
 {
     public static class MessageCommons
     {

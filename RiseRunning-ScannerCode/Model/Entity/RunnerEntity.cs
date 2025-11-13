@@ -1,4 +1,4 @@
-﻿namespace RiseRunning_ScannerCode.Entity
+﻿namespace RiseRunning_ScannerCode.Model.Entity
 {
     public record RunnerDTO(string Nome, long Cpf, DateTime DataHora);
 

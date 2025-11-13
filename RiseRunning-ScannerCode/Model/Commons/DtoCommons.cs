@@ -1,6 +1,6 @@
-﻿using RiseRunning_ScannerCode.Entity;
+﻿using RiseRunning_ScannerCode.Model.Entity;
 
-namespace RiseRunning_ScannerCode.Commons
+namespace RiseRunning_ScannerCode.Model.Commons
 {
     public static class DtoCommons
     {
